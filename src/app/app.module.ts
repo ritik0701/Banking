@@ -11,6 +11,12 @@ import { TransactionComponent } from './transaction/transaction.component';
 import { AddBeneficiaryComponent } from './add-beneficiary/add-beneficiary.component';
 import { AccountStatusComponent } from './account-status/account-status.component';
 import { AdminComponent } from './admin/admin.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminLogoutComponent } from './admin-logout/admin-logout.component';
+import { ErrorComponent } from './error/error.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ChangeTransactionPasswordComponent } from './change-transaction-password/change-transaction-password.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,13 @@ import { AdminComponent } from './admin/admin.component';
     TransactionComponent,
     AddBeneficiaryComponent,
     AccountStatusComponent,
-    AdminComponent
+    AdminComponent,
+    AdminLoginComponent,
+    AdminLogoutComponent,
+    ErrorComponent,
+    ChangePasswordComponent,
+    ChangeTransactionPasswordComponent,
+    AccountDetailsComponent
   ],
   imports: [
     BrowserModule,
