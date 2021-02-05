@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Account } from '../classes/account';
 
 @Component({
   selector: 'app-account-details',
@@ -8,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class AccountDetailsComponent implements OnInit {
 
   constructor() { }
-
+  account : Account = new Account();
+  
   ngOnInit(): void {
+    console.log(this.account.balance)
   }
 
 }
