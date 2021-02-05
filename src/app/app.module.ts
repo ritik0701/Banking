@@ -37,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     ErrorComponent,
     ChangePasswordComponent,
     ChangeTransactionPasswordComponent,
-    AccountDetailsComponent
+    AccountDetailsComponent,
+    
   ],
   imports: [
     BrowserModule,
