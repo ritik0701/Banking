@@ -18,6 +18,9 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { ChangeTransactionPasswordComponent } from './change-transaction-password/change-transaction-password.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +41,9 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
