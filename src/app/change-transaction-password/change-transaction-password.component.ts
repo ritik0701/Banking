@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl , FormGroup ,Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-change-transaction-password',
@@ -12,4 +13,13 @@ export class ChangeTransactionPasswordComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  contactForm = new FormGroup({
+    oldtransactionpassword: new FormControl('',Validators.required),
+    newtransactionpassword: new FormControl('',Validators.required),
+    confirmtransactionpassword: new FormControl('',Validators.required)
+  });
+    onchangeTransPass(){
+      console.log(this.contactForm.value);
+    }
+  
 }
