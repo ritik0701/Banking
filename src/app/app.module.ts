@@ -17,6 +17,7 @@ import { ErrorComponent } from './error/error.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ChangeTransactionPasswordComponent } from './change-transaction-password/change-transaction-password.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,10 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

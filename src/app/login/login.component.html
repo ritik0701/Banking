@@ -1,9 +1,63 @@
-<form>
-    User Id: <input ><br>
-    Password: <input><br>
-    <button type="submit">Submit</button>
+<div class=form-container>
+    <h1 class=heading>User Login</h1>
+<form [formGroup]=contactForm (ngSumbit)=onLogin()>
 
+    <div class="row">
+        <div class="col-25"><label>User Id:</label></div>
+        <div class="col-75"><input type="text" required placeholder="Enter Your User Id" formControlName=userid minlength="10">
+            <div  *ngIf="!contactForm.controls.userid?.valid && (contactForm.controls.userid?.dirty || contactForm.controls.userid?.touched)"
+            [ngStyle]="{'color':'red'}">
+            Invalid User Id
+            </div>
+        </div> 
+    </div>
+
+    
+
+    <div class="row">
+        <div class="col-25"><label>Password:</label></div>
+        <div class="col-75"><input type="text" required placeholder="Enter Your Password" formControlName=password minlength="8">
+            <div *ngIf="!contactForm.controls.password?.valid && (contactForm.controls.password?.dirty || contactForm.controls.password?.touched)"
+            [ngStyle]="{'color':'red'}">
+            Invalid Password
+             </div>
+        </div>
+    </div>
+
+    
+
+
+        <div class="row">
+        <button class="btn-style" type="submit" [disabled]='!contactForm.valid'>Login</button>
+     </div>
+     <div class="table">
+    <table>
+    <tr >
+        <td> 
+            <div class="row">
+                <a routerLink="/changepassword" class="nav-link ">Forget UserId</a>
+            </div>
+        </td>
+        <td>|</td>
+       
+        <td>
+            <div class="row">
+                <a routerLink="/changepassword" class="nav-link ">Forget Password</a>
+            </div>
+        </td>
+        <td>|</td>
+            <td>
+                <div class="row">
+                <a routerLink="/openaccount" class="nav-link ">Open Account</a>
+            </div>
+        </td>
+        </tr>
+</table>
+</div>      
 </form>
-Forgot Password
-Forgot UserID
-Open Account
+</div>
+
+    
+
+       
+  
