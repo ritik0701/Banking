@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
@@ -127,6 +128,9 @@
   },
   "defaultProject": "banking",
   "cli": {
+
     "analytics": "6f5a3c04-46b1-431f-bfc4-344e202e4683"
+
+    
   }
 }
