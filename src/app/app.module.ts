@@ -17,8 +17,8 @@ import { ErrorComponent } from './error/error.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ChangeTransactionPasswordComponent } from './change-transaction-password/change-transaction-password.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
-import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -43,6 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule
   ],
