@@ -4,3 +4,48 @@
     Bank Ifsc<input ><br>
     <button type="submit">Add</button>
 </form>
+
+<div class=form-container>
+    <h1 class=heading>Beneficiary</h1>
+<form   class="form" [formGroup]="BeneficiaryForm" (ngSubmit)="AddBenef()">
+
+    <div class="row">
+        <div class="col-25">
+            <label>Beneficiary Account Number</label></div>
+            <div class="col-75"><input type="text" formControlName="baccount" ></div> 
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label>Re-enter Beneficiary Account Number</label></div>
+            <div class="col-75"><input type="text" formControlName="baccount2"></div> 
+    </div>
+
+    <div class="row">
+        <div class="col-25">
+            <label> Beneficiary Name</label> </div>
+            <div class="col-75"><input type="text" formControlName="baccountname" ></div> 
+     </div> 
+
+   
+  
+     <div class="row">
+        <div class="col-25">
+            <label> Beneficiary Bank IFSC code</label> </div>
+            <div class="col-75"><input type="text" formControlName="baccountbankifsc"></div> 
+     </div> 
+   
+
+
+    
+
+
+    <div class="row">
+        <button class="btn-style" type="submit">Submit</button>
+     </div>
+
+</form>
+</div>
+
+   
+  
+  
