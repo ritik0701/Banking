@@ -19,9 +19,9 @@ export class AddBeneficiaryComponent implements OnInit {
   
   libeneficiaryst : Array<Object> =[];
   
-  loginForm!: FormGroup;
+  
 
-  constructor(private beneficiaryservice: BeneficiaryService,private fb: FormBuilder) {
+  constructor(private beneficiaryservice: BeneficiaryService) {
    
    }
 
