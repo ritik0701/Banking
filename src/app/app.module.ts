@@ -38,11 +38,7 @@ import { ForgetidpassComponent } from './forgetidpass/forgetidpass.component';
     ChangePasswordComponent,
     ChangeTransactionPasswordComponent,
     AccountDetailsComponent,
-<<<<<<< HEAD
-    
-=======
     ForgetidpassComponent
->>>>>>> ketki
   ],
   imports: [
     BrowserModule,
@@ -50,10 +46,6 @@ import { ForgetidpassComponent } from './forgetidpass/forgetidpass.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
-<<<<<<< HEAD
-=======
-
->>>>>>> ketki
   ],
   providers: [],
   bootstrap: [AppComponent]
