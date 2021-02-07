@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-//import { Beneficiary } from './beneficiary';
+import { Beneficiary } from './beneficiary';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -8,14 +8,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BeneficiaryService {
 
-  baseUrl: string = 'http://localhost:8080/';
+  baseUrl: string = 'http://localhost:8085/';
 
   constructor(private myhttp:HttpClient) { }
 
- // addBeneficiary(newBenf: Beneficiary): Observable<Beneficiary>
- // {
+ addBeneficiary(newBenf: Beneficiary): Observable<Beneficiary>
+ {
     
-  //  return this.myhttp.post<Beneficiary>(this.baseUrl+"addBeneficiary/",newBenf);
-//  }
+  return this.myhttp.post<Beneficiary>(this.baseUrl+"addBeneficiary/",newBenf);
+  }
 
 }

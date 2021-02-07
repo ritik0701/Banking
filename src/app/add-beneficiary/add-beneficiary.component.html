@@ -12,27 +12,38 @@
     <div class="row">
         <div class="col-25">
             <label>Beneficiary Account Number</label></div>
-            <div class="col-75"><input type="text" formControlName="baccount" ></div> 
-            <div  *ngIf="!BeneficiaryForm.controls.baccount?.valid && (BeneficiaryForm.controls.baccount?.dirty || BeneficiaryForm.controls.baccount?.touched)"
+            <div class="col-75"><input type="number" placeholder="Accoount Number" formControlName="beneficiaryAccNo" ></div> 
+            <div  *ngIf="!BeneficiaryForm.controls.beneficiaryAccNo?.valid && (BeneficiaryForm.controls.beneficiaryAccNo?.dirty || BeneficiaryForm.controls.beneficiaryAccNo?.touched)"
                 [ngStyle]="{'color':'red'}">
                 Invalid Account Number
                 </div>
     </div>
     <div class="row">
         <div class="col-25">
-            <label>Re-enter Beneficiary Account Number</label></div>
-            <div class="col-75"><input type="text" formControlName="baccount2"></div> 
-            <div  *ngIf="!BeneficiaryForm.controls.baccount2?.valid && (BeneficiaryForm.controls.baccount2?.dirty || BeneficiaryForm.controls.baccount2?.touched)"
+            <label>User ID</label></div>
+            <div class="col-75"><input type="number" placeholder="Enter Id" formControlName="userId"></div> 
+            <div  *ngIf="!BeneficiaryForm.controls.userId?.valid && (BeneficiaryForm.controls.userId?.dirty || BeneficiaryForm.controls.userId?.touched)"
                 [ngStyle]="{'color':'red'}">
-                Invalid Account Number
+              user id not valid
                 </div>
+              
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label>Date</label></div>
+            <div class="col-75"><input type="date" formControlName="dateAdded"></div> 
+            <div  *ngIf="!BeneficiaryForm.controls.dateAdded?.valid && (BeneficiaryForm.controls.dateAdded?.dirty || BeneficiaryForm.controls.dateAdded?.touched)"
+                [ngStyle]="{'color':'red'}">
+              Invalid date
+                </div>
+              
     </div>
 
     <div class="row">
         <div class="col-25">
             <label> Beneficiary Name</label> </div>
-            <div class="col-75"><input type="text" formControlName="baccountname" ></div> 
-            <div  *ngIf="!BeneficiaryForm.controls.baccountname?.valid && (BeneficiaryForm.controls.baccountname?.dirty || BeneficiaryForm.controls.baccountname?.touched)"
+            <div class="col-75"><input type="text" placeholder="Beneficiary Name" formControlName="beneficiaryName" ></div> 
+            <div  *ngIf="!BeneficiaryForm.controls.beneficiaryName?.valid && (BeneficiaryForm.controls.beneficiaryName?.dirty || BeneficiaryForm.controls.beneficiaryName?.touched)"
                 [ngStyle]="{'color':'red'}">
                 Invalid Beneficiary Name
                 </div>
@@ -43,16 +54,18 @@
      <div class="row">
         <div class="col-25">
             <label> Beneficiary Bank IFSC code</label> </div>
-            <div class="col-75"><input type="text" formControlName="baccountbankifsc"></div> 
-            <div  *ngIf="!BeneficiaryForm.controls.baccountbankifsc?.valid && (BeneficiaryForm.controls.baccountbankifsc?.dirty || BeneficiaryForm.controls.baccountbankifsc?.touched)"
+            <div class="col-75"><input type="text" placeholder="Beneficiary Bank IFSC code" formControlName="bankIfsc"></div> 
+            <div  *ngIf="!BeneficiaryForm.controls.bankIfsc?.valid && (BeneficiaryForm.controls.bankIfsc?.dirty || BeneficiaryForm.controls.bankIfsc?.touched)"
                 [ngStyle]="{'color':'red'}">
-                Invalid Beneficiary Bank IFSC code
+                Invalid  IFSC code
                 </div>
      </div> 
    
 
 
-    
+    <div>
+
+    </div>
 
 
     <div class="row">

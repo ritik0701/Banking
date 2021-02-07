@@ -1,0 +1,20 @@
+input[type=date] ,select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  .col-25 {
+    float: left;
+    width: 20%;
+    margin-top: auto;
+    margin-left: 10%;
+    text-align: center;
+    color: #216288;
+    font-weight: bold;
+    
+  }
+  .form-container{
+    box-shadow: 10px 10px 8px #888888;
+  }
