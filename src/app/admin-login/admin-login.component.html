@@ -1,12 +1,12 @@
 <div class=form-container>
     <h1 class=heading>Admin Login</h1>
-<form  [formGroup]=contactForm (ngSumbit)=onadminLogin()>
+<form  [formGroup]=contactForm (ngSubmit)=onadminLogin()>
 
     <div class="row">
         <div class="col-25">
-            <label>User Id:</label></div>
-            <div class="col-75"><input type="text" required placeholder="Enter Your User Id" formControlName=adminid >
-                <div  *ngIf="!contactForm.controls.adminid?.valid && (contactForm.controls.adminid?.dirty || contactForm.controls.adminid?.touched)"
+            <label>Admin Id:</label></div>
+            <div class="col-75"><input type="text" required placeholder="Enter Your User Id" formControlName=userId minlength="4">
+                <div  *ngIf="!contactForm.controls.userId?.valid && (contactForm.controls.userId?.dirty || contactForm.controls.userId?.touched)"
                 [ngStyle]="{'color':'red'}">
                 Invalid Admin Id
                 </div>
@@ -15,8 +15,8 @@
     <div class="row">
         <div class="col-25">
             <label>Password:</label></div>
-            <div class="col-75"><input type="text" required placeholder="Enter Your Password" formControlName=password >
-                <div  *ngIf="!contactForm.controls.password?.valid && (contactForm.controls.password?.dirty || contactForm.controls.password?.touched)"
+            <div class="col-75"><input type="password" required placeholder="Enter Your Password" formControlName=pass minlength="4s">
+                <div  *ngIf="!contactForm.controls.pass?.valid && (contactForm.controls.pass?.dirty || contactForm.controls.pass?.touched)"
                 [ngStyle]="{'color':'red'}">
                 Invalid password
                 </div>

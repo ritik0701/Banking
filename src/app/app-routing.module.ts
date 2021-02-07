@@ -11,7 +11,7 @@ import { ErrorComponent } from './error/error.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { OpenAccountComponent } from './open-account/open-account.component';
-
+import { ForgetidpassComponent } from './forgetidpass/forgetidpass.component';
 const routes: Routes = [
   {  path:'dashboard',component:DashboardComponent },
   {  path:'login',component:LoginComponent },
@@ -23,6 +23,7 @@ const routes: Routes = [
   {  path:'openaccount',component:OpenAccountComponent },
   {  path:'changepassword',component:ChangePasswordComponent },
   {  path:'changetransactionpassword',component:ChangeTransactionPasswordComponent },
+  { path:'forgetidpass',component:ForgetidpassComponent},
   {  path:'',component:LoginComponent },
   {path:'**',component:ErrorComponent }
 ];

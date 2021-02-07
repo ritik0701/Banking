@@ -19,6 +19,8 @@ import { ChangeTransactionPasswordComponent } from './change-transaction-passwor
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ForgetidpassComponent } from './forgetidpass/forgetidpass.component';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ErrorComponent,
     ChangePasswordComponent,
     ChangeTransactionPasswordComponent,
-    AccountDetailsComponent
+    AccountDetailsComponent,
+    ForgetidpassComponent
   ],
   imports: [
     BrowserModule,

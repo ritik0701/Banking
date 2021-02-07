@@ -7,20 +7,33 @@ import { UserLogin } from './user-login';
 })
 export class UserLoginService {
 
-  
+  constructor(private myHttp: HttpClient)
+  {
 
+  }
+  
   baseUrl = 'http://localhost:8085/';
-  constructor(private myHttp: HttpClient) { }
 
   UserLogin(user:UserLogin): Observable<UserLogin>
   {
+    return this.myHttp.post<UserLogin>(this.baseUrl+'loginUser/',user)
+  }
+
+
+
+
+
+
+  /*UserLogin(user:UserLogin): Observable<UserLogin>
+  {
     return this.myHttp.post<UserLogin>(this.baseUrl+'loginUser/',user);
   }
-  /*UserLogin(): Observable<any>{
+  UserLogin(user:UserLogin): Observable<any>{
     console.log(this.UserLogin);
-    return this.myHttp.post<any>(this.baseUrl + 'loginUser/',this.UserLogin);
+    return this.myHttp.post<any>(this.baseUrl + 'loginUser/',user);
     //return this.myHttp.get<UserLogin[]>(this.baseUrl + 'loginUser/');
   }
+  /*
   UserLogin(flight: number): Observable<UserLogin[]>{
     return this.myHttp.get<UserLogin[]>(this.baseUrl + 'getFlights/');
   }*/

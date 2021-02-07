@@ -1,0 +1,24 @@
+<div class=form-container>
+    <h1 class=heading>Forget Id and Password</h1>
+<form  [formGroup]=contactForm (ngSubmit)=onSubmit()>
+
+    <div class="row">
+        <div class="col-25">
+            <label>Account Number</label></div>
+            <div class="col-75"><input type="text" required placeholder="Enter Your Account Number" formControlName=accNo minlength="9">
+                <div  *ngIf="!contactForm.controls.accNo?.valid && (contactForm.controls.accNo?.dirty || contactForm.controls.accNo?.touched)"
+                [ngStyle]="{'color':'red'}">
+                Invalid Account Number
+                </div>
+            </div> 
+    </div>
+
+
+        <div class="row">
+        <button class="btn-style" type="submit" [disabled]='!contactForm.valid'>Submit</button>
+     </div>
+</form>
+</div>
+
+   
+  
