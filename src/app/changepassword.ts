@@ -1,14 +1,9 @@
 export class Changepassword {
 
 
-    OldPassword!: String;
-    NewPasssword!: String;
-    ConfirmPassword!: String;
-      
+    oldPassword!: String;
+    updatedPassword!: String;
+    confirmPassword!: String;
+    userId!: number;
 
-
-    constructor( )
-    {
-        
-    }
 }

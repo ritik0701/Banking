@@ -14,7 +14,7 @@ export class ChangepasswordService {
 
   changePassword(newPass: Changepassword): Observable<Changepassword>
   {
-    return this.myhttp.post<Changepassword>(this.baseUrl+"changePassword/" ,newPass);
+    return this.myhttp.post<Changepassword>(this.baseUrl+"resetPass/" ,newPass);
   }
 
 }
