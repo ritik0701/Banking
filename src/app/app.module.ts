@@ -17,9 +17,9 @@ import { ErrorComponent } from './error/error.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ChangeTransactionPasswordComponent } from './change-transaction-password/change-transaction-password.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ForgetidpassComponent } from './forgetidpass/forgetidpass.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,11 @@ import { HttpClientModule } from '@angular/common/http';
     ChangePasswordComponent,
     ChangeTransactionPasswordComponent,
     AccountDetailsComponent,
+<<<<<<< HEAD
     
+=======
+    ForgetidpassComponent
+>>>>>>> ketki
   ],
   imports: [
     BrowserModule,
@@ -46,6 +50,10 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
+<<<<<<< HEAD
+=======
+
+>>>>>>> ketki
   ],
   providers: [],
   bootstrap: [AppComponent]
