@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ErrorComponent } from './error/error.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { NeftComponent } from './neft/neft.component';
 import { OpenAccountComponent } from './open-account/open-account.component';
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   {  path:'changepassword',component:ChangePasswordComponent },
   {  path:'changetransactionpassword',component:ChangeTransactionPasswordComponent },
   {  path:'',component:LoginComponent },
+  { path:'',component:NeftComponent},
   {path:'**',component:ErrorComponent }
 ];
 
