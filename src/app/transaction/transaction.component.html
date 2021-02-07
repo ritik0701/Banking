@@ -13,8 +13,14 @@
         </tr>
     </thead>
     
-    <tr>
-        <td></td>
+    <tr *ngFor= "let transaction of transactions">
+        <td>{{transaction.transactionId}}</td>
+        <td>{{transaction.beneficiaryAcctNo}}</td>
+        <td>{{transaction.beneficiaryName}}</td>
+        <td>{{transaction.transactionType}}</td>
+        <td>{{transaction.transactionAmount}}</td>
+        <td>{{transaction.dbOrCr}}</td>
+        <td>{{transaction.transactionDate}}</td>
     </tr>
     
     </table>

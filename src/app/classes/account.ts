@@ -21,3 +21,7 @@ export class Account {
     state!:string
 
 }
+
+export class AccountNumberDTO{
+	accNo!:number
+}

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs/internal/Subscription';
+import { AccountNumberDTO } from '../classes/account';
 import { Transaction } from '../classes/transaction';
+import { TransactionsService } from '../services/transactions.service';
 
 @Component({
   selector: 'app-transaction',
@@ -8,13 +11,19 @@ import { Transaction } from '../classes/transaction';
 })
 export class TransactionComponent implements OnInit {
 
-  constructor() { }
-  trans : Transaction = {
-    transactionId :12321
+  transactions: Transaction[] = []; 
+  private subscription: Subscription = new Subscription;
+  constructor( private transactionService :TransactionsService) { }
+  accNo: AccountNumberDTO = {
+    accNo:100000000
   }
-
-  ngOnInit(): void {
-    console.log(this.trans.transactionId)
+    ngOnInit(): void {
+      this.subscription = this.transactionService.getTransactions(this.accNo).subscribe((res:any) =>{
+        this.transactions = res
+      },(err :any)=>{
+        console.log(err);
+      }
+      )
   }
 
 }
