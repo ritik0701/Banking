@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup,FormControl,Validators} from '@angular/forms';
-import { Subscription } from 'rxjs';
+import {FormGroup,FormControl,Validators, RequiredValidator} from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs/internal/Subscription';
 import Swal from 'sweetalert2';
-
-
 import { UserLogin } from '../user-login';
 import { UserLoginService } from '../user-login.service';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,25 +17,28 @@ user=new UserLogin();
 private subscription :Subscription =new Subscription;
  
 
-  constructor(private userloginService :UserLoginService) 
+  constructor(private router: Router, private userloginService :UserLoginService) 
   { }
 
   contactForm=new FormGroup({
-    userId:new FormControl('',[Validators.required]),
-    pass:new FormControl('',[Validators.required])
+    userId:new FormControl('',Validators.required),
+    pass:new FormControl('',Validators.required)
   })
   ngOnInit(): void {
+    if(sessionStorage.getItem("userId")!=null && sessionStorage.getItem("userId")!='' ){
+      this.router.navigate(['/dashboard'])
+    }
   }
   onLogin()
   {
-    
-   
-        this.subscription=this.userloginService.UserLogin(this.contactForm.value)
+     this.subscription=this.userloginService.UserLogin(this.contactForm.value)
         .subscribe((data:any) =>{
           
-           if(data.status=="Login Successful!!")
+           if(data.accNo!=null)
            {
-            Swal.fire("login successful!!");
+             sessionStorage.setItem("userId",this.contactForm.controls.userId.value)
+             sessionStorage.setItem("accNo",data.accNo)
+           this.router.navigate(['/dashboard'])
            }
            else
            {
@@ -50,7 +51,6 @@ console.log(this.contactForm.value)
     
   }
   
-
 }
 
 

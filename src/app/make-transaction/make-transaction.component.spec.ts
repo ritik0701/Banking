@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NeftComponent } from './neft.component';
+import { MakeTransactionComponent } from './make-transaction.component';
 
-describe('NeftComponent', () => {
-  let component: NeftComponent;
-  let fixture: ComponentFixture<NeftComponent>;
+describe('MakeTransactionComponent', () => {
+  let component: MakeTransactionComponent;
+  let fixture: ComponentFixture<MakeTransactionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NeftComponent ]
+      declarations: [ MakeTransactionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NeftComponent);
+    fixture = TestBed.createComponent(MakeTransactionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

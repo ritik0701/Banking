@@ -1,11 +1,4 @@
-<form>
-    Name <input ><br>
-    Account Number <input><br>
-    Bank Ifsc<input ><br>
-    <button type="submit">Add</button>
-</form>
-
-<div class=form-container>
+<div class=form-container >
     <h1 class=heading>Beneficiary</h1>
 <form   class="form" [formGroup]="BeneficiaryForm" (ngSubmit)="AddBenef()">
 
@@ -24,17 +17,7 @@
             <div class="col-75"><input type="number" placeholder="Enter Id" formControlName="userId"></div> 
             <div  *ngIf="!BeneficiaryForm.controls.userId?.valid && (BeneficiaryForm.controls.userId?.dirty || BeneficiaryForm.controls.userId?.touched)"
                 [ngStyle]="{'color':'red'}">
-              user id not valid
-                </div>
-              
-    </div>
-    <div class="row">
-        <div class="col-25">
-            <label>Date</label></div>
-            <div class="col-75"><input type="date" formControlName="dateAdded"></div> 
-            <div  *ngIf="!BeneficiaryForm.controls.dateAdded?.valid && (BeneficiaryForm.controls.dateAdded?.dirty || BeneficiaryForm.controls.dateAdded?.touched)"
-                [ngStyle]="{'color':'red'}">
-              Invalid date
+              User Id not valid
                 </div>
               
     </div>

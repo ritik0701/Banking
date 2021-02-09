@@ -1,0 +1,15 @@
+.accountSummary{
+    border:rgb(242 242 242);
+    border-style:solid;
+    border-radius: 10px;
+    background: #f2f2f2;
+    margin-top:20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: darkgray;
+}
+
+.row-align{
+    display: flex;
+    justify-content: center;
+}

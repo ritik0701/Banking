@@ -17,7 +17,15 @@ baseUrl: string = 'http://localhost:8085/';
     return this.myhttp.post(this.baseUrl+"accountdetails/",accNo);
   }
 
-  openAccountService(openAccount:FormGroup) : Observable<any>{
+  openAccountService(openAccount:Account) : Observable<any>{
     return this.myhttp.post(this.baseUrl+"openaccount/",openAccount);
+  }
+
+  approveAccountService(accNumber:number):Observable<any>{
+    return this.myhttp.post(this.baseUrl+"approveaccount/",{accNo:accNumber});
+  }
+
+  getAccounts():Observable<any>{
+    return this.myhttp.get(this.baseUrl+"newAccounts/");
   }
 }

@@ -1,18 +1,21 @@
 
-<nav class="navbar ">
-  
-    <a routerLink="" class="navbar-brand ">Application</a>
-  <!-- <a [routerLink]="['login','1234']" class="nav-link ">Login</a> -->
-  <a routerLink="/dashboard" class="nav-link ">Dashboard</a>
-  
-  <a routerLink="/openaccount" class="nav-link ">Open Account</a>
-  <a routerLink="/accountstatus" class="nav-link ">Account Status</a>
-  <a routerLink="/changepassword" class="nav-link ">Change Password</a>
-  <a routerLink="/changetransactionpassword" class="nav-link ">Change Transaction Password</a>
-  <a routerLink="/admin/login" class="nav-link ">Admin Login</a>
-  <!-- <a routerLink="/admin" class="nav-link ">Admin Dashboard</a>
-  <a routerLink="/admin/logout" class="nav-link ">Admin Logout</a> -->
-    <button> <a routerLink="/logout" class="nav-link ">Logout</a> </button>
-  </nav>
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #f2f2f2;">
+   <!-- <a [routerLink]="['login','1234']" class="nav-link ">Login</a> -->
+    <a routerLink="" class="navbar-brand ">
+      <img src="../assets/LOGO.jpeg" width="70" height="70" alt="">
+    </a>
+ <div *ngIf="checkSession()" class = container>
+  <a routerLink="/dashboard" class="nav-link link">Dashboard</a>
+  <div class=select>
+    <a class="nav-item link setting" routerLink="/changepassword" >Change Password</a>
+    <a class="nav-item link setting" routerLink="/changetransactionpassword">Change Transaction Password</a>
+    <button class=logout (click)="logout()">Logout</button>
+  </div>
+</div>
+<div *ngIf="!checkSession()" class = container>
+  <a routerLink="/openaccount" class="nav-link link">Open Account</a>
+</div>
 
+
+  </nav>
   <router-outlet ></router-outlet>

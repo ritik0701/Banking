@@ -1,0 +1,15 @@
+.form-container{
+    width: 80%;
+    border:rgb(242 242 242);
+    border-style:solid;
+    border-radius: 10px;
+  }
+
+  .col-25 {
+    float: left;
+    width: 20%;
+    margin-top: auto;
+    margin-left: 10%;
+    color: #88948b;
+    justify-content: center;
+  }

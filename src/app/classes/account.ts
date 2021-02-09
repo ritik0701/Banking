@@ -23,5 +23,5 @@ export class Account {
 }
 
 export class AccountNumberDTO{
-	accNo!:number
+	accNo!: any
 }

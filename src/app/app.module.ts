@@ -18,8 +18,11 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { ChangeTransactionPasswordComponent } from './change-transaction-password/change-transaction-password.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {  HttpClientModule } from '@angular/common/http';
 import { ForgetidpassComponent } from './forgetidpass/forgetidpass.component';
+import { MakeTransactionComponent } from './make-transaction/make-transaction.component';
+
+
 
 @NgModule({
   declarations: [
@@ -38,7 +41,8 @@ import { ForgetidpassComponent } from './forgetidpass/forgetidpass.component';
     ChangePasswordComponent,
     ChangeTransactionPasswordComponent,
     AccountDetailsComponent,
-    ForgetidpassComponent
+    ForgetidpassComponent,
+    MakeTransactionComponent
   ],
   imports: [
     BrowserModule,

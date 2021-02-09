@@ -8,3 +8,9 @@ export class Transaction {
 	transactionType ?: string
 	accNo ?: number
 }
+
+export class MakeTransaction {
+	transactionType!:string
+	beneficiaryId!: number
+	amount!:number
+}

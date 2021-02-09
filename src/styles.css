@@ -40,11 +40,8 @@ button{
     box-sizing: border-box;
   }
   
-<<<<<<< HEAD
-  input[type=text],input[type=number] ,select, textarea {
-=======
-  input[type=text] ,input[type=password], select, textarea {
->>>>>>> ketki
+
+  input[type=text] ,input[type=password],input[type=number] , select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;

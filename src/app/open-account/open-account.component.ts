@@ -37,9 +37,10 @@ export class OpenAccountComponent implements OnInit {
   constructor( private accountService :AccountService) { }
 
   onSubmit(){
-    //console.log(this.openAccountForm)
-   this.subscription = this.accountService.openAccountService(this.openAccountForm).subscribe((res:any) =>{
+    console.log(this.openAccountForm)
+   this.subscription = this.accountService.openAccountService(this.openAccountForm.value).subscribe((res:any) =>{
       console.log(res);
+      alert("Application Is Submitted")
     },(err :any)=>{
       console.log(err);
     }

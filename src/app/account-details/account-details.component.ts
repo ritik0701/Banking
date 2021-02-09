@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Account } from '../classes/account';
+import { AccountService } from '../services/account.service';
 
 @Component({
   selector: 'app-account-details',
@@ -8,11 +10,23 @@ import { Account } from '../classes/account';
 })
 export class AccountDetailsComponent implements OnInit {
 
-  constructor() { }
-  account : Account = new Account();
-  
+  constructor(private accountService: AccountService) { }
+  accounts : any = []
+private subscription : Subscription = new Subscription ;
+approve(accNo:number){
+  console.log(this.accounts)
+  this.subscription = this.accountService.approveAccountService(accNo).subscribe((res:any)=>{
+    console.log(res)
+  })
+}
+
   ngOnInit(): void {
-    console.log(this.account.balance)
+    this.subscription = this.accountService.getAccounts().subscribe((res:any)=>{
+      this.accounts = res;
+    },
+    (err:any)=>{
+      console.log(err)
+    })
   }
 
 }

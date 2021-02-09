@@ -1,40 +1,61 @@
-<div class=form-container>
+<div class="form-container maargin">
     <h1 class=heading>Account Application</h1>
 <form [formGroup]=openAccountForm (ngSubmit)=onSubmit()>
     <div class="row">
         <div class="col-25">
             <label>Firstname</label></div>
-            <div class="col-75"><input type="text" placeholder="Firstname" formControlName="firstname"></div> 
+            <div class="col-75">
+                <input type="text" placeholder="Firstname" formControlName="firstname">
+                <div *ngIf="!openAccountForm.controls.firstname?.valid && (openAccountForm.controls.firstname?.touched)"[ngStyle]="{'color':'red'}">
+                    Invalid Input 
+                </div>
+            </div> 
     </div>
 
     <div class="row">
         <div class="col-25">
             <label> Middlename:</label> </div>
-            <div class="col-75"><input type="text" placeholder="Middlename" formControlName="middlename"></div> 
+            <div class="col-75"><input type="text" placeholder="Middlename" formControlName="middlename">
+            </div> 
      </div> 
 
     <div class="row">
         <div class="col-25">
             <label>last Name:</label> </div>
-            <div class="col-75"><input type="text" placeholder="Lastname" formControlName="lastname"></div> 
+            <div class="col-75"><input type="text" placeholder="Lastname" formControlName="lastname">
+                <div *ngIf="!openAccountForm.controls.lastname?.valid && (openAccountForm.controls.lastname?.touched)"[ngStyle]="{'color':'red'}">
+                    Invalid Input 
+                </div>
+            </div> 
     </div> 
 
     <div class="row">
         <div class="col-25"> 
             <label>Email</label> </div>
-            <div class="col-75"><input type="text" placeholder="Email" formControlName="email"></div> 
+            <div class="col-75"><input type="text" placeholder="Email" formControlName="email">
+                <div *ngIf="!openAccountForm.controls.email?.valid && (openAccountForm.controls.email?.touched)"[ngStyle]="{'color':'red'}">
+                    Invalid Input 
+                </div></div> 
     </div> 
 
     <div class="row"> 
         <div class="col-25">
             <label>Phone</label> </div>
-            <div class="col-75"><input type="text" placeholder="Phone" formControlName="phone"></div> 
+            <div class="col-75"><input type="text" placeholder="Phone" formControlName="phone">
+                <div *ngIf="!openAccountForm.controls.phone?.valid && (openAccountForm.controls.phone?.touched)"[ngStyle]="{'color':'red'}">
+                    Invalid Input 
+                </div>
+            </div> 
     </div> 
 
     <div class="row"> 
         <div class="col-25">
             <label>Father Name</label></div> 
-            <div class="col-75"><input type="text" placeholder="Father Name" formControlName="father"></div> 
+            <div class="col-75"><input type="text" placeholder="Father Name" formControlName="father">
+                <div *ngIf="!openAccountForm.controls.father?.valid && (openAccountForm.controls.father?.touched)"[ngStyle]="{'color':'red'}">
+                    Invalid Input 
+                </div>
+            </div> 
     </div> 
    
     <div class="row"> 
@@ -54,67 +75,101 @@
         <div class="col-25">
             <label>Proof Id</label>
         </div> 
-        <div class="col-75"><input type="text" placeholder="Proof Id" formControlName="proofId"></div> 
+        <div class="col-75"><input type="text" placeholder="Proof Id" formControlName="proofId">
+            <div *ngIf="!openAccountForm.controls.proofId?.valid && (openAccountForm.controls.proofId?.touched)"[ngStyle]="{'color':'red'}">
+                Invalid Input 
+            </div>
+        </div> 
     </div> 
 
     <div class="row"> 
         <div class="col-25">
             <label>Date of Birth</label>
         </div>
-        <div class="col-75"><input type="text" placeholder="Date of Birth" formControlName="dob"> </div> 
+        <div class="col-75"><input type="text" placeholder="Date of Birth" formControlName="dob">
+            <div *ngIf="!openAccountForm.controls.dob?.valid && (openAccountForm.controls.dob?.touched)"[ngStyle]="{'color':'red'}">
+                Invalid Input 
+            </div>
+         </div> 
     </div> 
 
     <div class="row"> 
         <div class="col-25">
             <label>Address</label>
         </div> 
-        <div class="col-75"><input type="text" placeholder="Address" formControlName="address"></div> 
+        <div class="col-75"><input type="text" placeholder="Address" formControlName="address">
+            <div *ngIf="!openAccountForm.controls.address?.valid && (openAccountForm.controls.address?.touched)"[ngStyle]="{'color':'red'}">
+                Invalid Input 
+            </div>
+        </div> 
     </div> 
     <div class="row"> 
         <div class="col-25">
             <label>Landmark</label>
         </div> 
-        <div class="col-75"><input type="text" placeholder="Landmark" formControlName="landmark"></div> 
+        <div class="col-75"><input type="text" placeholder="Landmark" formControlName="landmark">
+        </div> 
     </div> 
 
     <div class="row"> 
         <div class="col-25">
             <label>Pincode</label>
         </div> 
-        <div class="col-75"><input type="text" placeholder="Pincode" formControlName="pincode"></div> 
+        <div class="col-75"><input type="text" placeholder="Pincode" formControlName="pincode">
+            <div *ngIf="!openAccountForm.controls.pincode?.valid && (openAccountForm.controls.pincode?.touched)"[ngStyle]="{'color':'red'}">
+            Invalid Input 
+        </div>
+        
+        </div> 
     </div> 
 
     <div class="row"> 
         <div class="col-25">
             <label>City</label>
         </div>
-        <div class="col-75"><input type="text" placeholder="City" formControlName="city"></div> 
+        <div class="col-75"><input type="text" placeholder="City" formControlName="city">
+            <div *ngIf="!openAccountForm.controls.city?.valid && (openAccountForm.controls.city?.touched)"[ngStyle]="{'color':'red'}">
+                Invalid Input 
+            </div>
+        </div> 
     </div> 
 
     <div class="row">
          <div class="col-25">
             <label>State</label>
          </div> 
-         <div class="col-75"><input type="text" placeholder="State" formControlName="state"></div> 
+         <div class="col-75"><input type="text" placeholder="State" formControlName="state">
+            <div *ngIf="!openAccountForm.controls.state?.valid && (openAccountForm.controls.state?.touched)"[ngStyle]="{'color':'red'}">
+                Invalid Input 
+            </div>
+        </div> 
     </div> 
 
     <div class="row"> 
         <div class="col-25">
             <label>Occupation</label>
         </div> 
-        <div class="col-75"><input type="text" placeholder="Occupation" formControlName="occupation"></div> 
+        <div class="col-75"><input type="text" placeholder="Occupation" formControlName="occupation">
+            <div *ngIf="!openAccountForm.controls.occupation?.valid && (openAccountForm.controls.occupation?.touched)"[ngStyle]="{'color':'red'}">
+                Invalid Input 
+            </div>
+        </div> 
     </div> 
 
     <div class="row"> 
         <div class="col-25">
             <label>Annual Income </label>
         </div>
-        <div class="col-75"><input type="text" placeholder="Annual Income" formControlName="annualIncome"></div> 
+        <div class="col-75"><input type="text" placeholder="Annual Income" formControlName="annualIncome">
+            <div *ngIf="!openAccountForm.controls.annualIncome?.valid && (openAccountForm.controls.annualIncome?.touched)"[ngStyle]="{'color':'red'}">
+                Invalid Input 
+            </div>
+        </div> 
     </div> 
 
 
     <div class="row">
-        <button class="btn-style" type="submit" >Submit</button>
+        <button class="btn-style" type="submit" >Apply</button>
      </div>
 
 </form>

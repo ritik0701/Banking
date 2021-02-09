@@ -1,0 +1,72 @@
+<div class= form-container>
+    <h1 class = heading>Fund Transfer</h1>
+    
+    <form [formGroup]=makeTransactionForm (ngSubmit)=makeTransaction()>
+
+        <div class="row">
+            <div class="col-25">
+                <label> Transaction Type </label></div>
+            <div class="col-75"> 
+                <select formControlName=transactionType >
+                    <option value=Neft>NEFT</option>
+                    <option value=RTGS>RTGS </option>
+                    <option value=IMPS> IMPS</option>
+                </select> 
+            <div *ngIf="!makeTransactionForm.controls.transactionType?.valid && (makeTransactionForm.controls.userId?.touched)"[ngStyle]="{'color':'red'}">
+                Invalid type
+            </div>
+        </div>
+            
+       </div>
+       <div class="row">
+        <div class="col-25">
+            <label> Choose Beneficiary </label></div>
+        <div class="col-75"> 
+            <select  formControlName=beneficiaryId >
+                <option>Select Beneficiary</option>
+                <option *ngFor= "let beneficiary of beneficiaries" value={{beneficiary.beneficiaryId}}>{{beneficiary.beneficiaryName}}</option>
+            </select> 
+        <div *ngIf="!makeTransactionForm.controls.beneficiary?.valid && (makeTransactionForm.controls.beneficiary?.touched)"[ngStyle]="{'color':'red'}">
+            Invalid Transaction 
+        </div>
+    </div>
+        
+   </div>
+       
+
+      <div class="row">
+            <div class="col-25">
+                <label> Amount </label></div>
+            <div class="col-75"> <input type ="text" placeholder="Amount to transfer" name="amount" formControlName=amount > 
+
+            <div *ngIf="!makeTransactionForm.controls.amount?.valid && (makeTransactionForm.controls.amount?.touched)"  [ngStyle]="{'color':'red'}">
+                Invalid Amount
+            </div>
+        </div>
+            
+       </div>
+
+       <div class="row">
+        <div class="col-25">
+            <label> Transaction Password </label></div>
+        <div class="col-75"> <input type ="text" placeholder="Transaction Password" name="transactionPassword" formControlName=transactionPassword > 
+
+        <div *ngIf="!makeTransactionForm.controls.transactionPassword?.valid && (makeTransactionForm.controls.transactionPassword?.touched)"  [ngStyle]="{'color':'red'}">
+            Invalid Transaction Password
+        </div>
+    </div>
+        
+   </div>
+    
+                <div class="row">
+                    <button class="btn-style" type="submit"  [disabled]='!makeTransactionForm.valid'> Transfer</button>
+                </div>
+    
+
+
+          </form>
+            
+    </div>
+         
+    
+    

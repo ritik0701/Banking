@@ -3,18 +3,24 @@ input[type=date] ,select, textarea {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    resize: vertical;
   }
   .col-25 {
     float: left;
     width: 20%;
     margin-top: auto;
     margin-left: 10%;
-    text-align: center;
-    color: #216288;
-    font-weight: bold;
-    
+    color: #88948b;
+    justify-content: center;
+  }
+
+  .col-75 {
+    float: left;
+    width: 50%;
+    margin-top: auto;
+    margin-left: 5px;
   }
   .form-container{
-    box-shadow: 10px 10px 8px #888888;
+    width: 80%;
+    margin-top:20px;
+    margin-bottom: 20px;
   }

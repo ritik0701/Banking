@@ -15,7 +15,7 @@ export class TransactionComponent implements OnInit {
   private subscription: Subscription = new Subscription;
   constructor( private transactionService :TransactionsService) { }
   accNo: AccountNumberDTO = {
-    accNo:100000000
+    accNo:sessionStorage.getItem('accNo')
   }
     ngOnInit(): void {
       this.subscription = this.transactionService.getTransactions(this.accNo).subscribe((res:any) =>{
