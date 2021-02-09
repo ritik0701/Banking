@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import Swal from 'sweetalert2';
 import { Account } from '../classes/account';
 import { AccountService } from '../services/account.service';
 
@@ -10,22 +12,23 @@ import { AccountService } from '../services/account.service';
 })
 export class AccountDetailsComponent implements OnInit {
 
-  constructor(private accountService: AccountService) { }
+  constructor(private accountService: AccountService,private router:Router) { }
   accounts : any = []
 private subscription : Subscription = new Subscription ;
 approve(accNo:number){
   console.log(this.accounts)
   this.subscription = this.accountService.approveAccountService(accNo).subscribe((res:any)=>{
-    console.log(res)
+
   })
 }
 
   ngOnInit(): void {
     this.subscription = this.accountService.getAccounts().subscribe((res:any)=>{
       this.accounts = res;
+      this.router.navigate(['/admin']);
     },
     (err:any)=>{
-      console.log(err)
+      Swal.fire("Could not Approve, Please Try Later")
     })
   }
 

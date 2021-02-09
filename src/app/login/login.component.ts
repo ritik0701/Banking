@@ -11,7 +11,6 @@ import { UserLoginService } from '../user-login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-//userlogin: UserLogin[]=[];
 
 user=new UserLogin();
 private subscription :Subscription =new Subscription;
@@ -34,20 +33,17 @@ private subscription :Subscription =new Subscription;
      this.subscription=this.userloginService.UserLogin(this.contactForm.value)
         .subscribe((data:any) =>{
           
-           if(data.accNo!=null)
+           if(data!=null)
            {
              sessionStorage.setItem("userId",this.contactForm.controls.userId.value)
              sessionStorage.setItem("accNo",data.accNo)
            this.router.navigate(['/dashboard'])
            }
-           else
+           },(err)=>
            {
             Swal.fire("Invalid Credentials!!");
-           }
+           });
 
-          }
-        );
-console.log(this.contactForm.value)
     
   }
   

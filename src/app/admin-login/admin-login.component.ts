@@ -40,8 +40,9 @@ export class AdminLoginComponent implements OnInit {
         Swal.fire("Invalid Credentials!!");
        }
 
-      }
-    );
-    console.log(this.contactForm.value)
+      },(err)=>{
+        Swal.fire("Invalid Credentials!!");
+      });
+    
   }
 }

@@ -7,7 +7,6 @@ import { Beneficiary } from '../beneficiary';
 import Swal from 'sweetalert2';
 import { DatePipe } from '@angular/common';
 import { UserService } from '../services/user.service';
-import {MakeTransactionComponent} from 'src/app/make-transaction/make-transaction.component'
 
 @Component({
   selector: 'app-add-beneficiary',
@@ -35,9 +34,7 @@ export class AddBeneficiaryComponent implements OnInit {
     dateAdded:new FormControl(this.datePipe.transform(new Date(), 'yyyy-MM-dd'),Validators.required)
   })
   AddBenef()
-  {
-    console.log(this.BeneficiaryForm.value)
-    
+  {    
     this.beneficiaryservice.addBeneficiary(this.BeneficiaryForm.value)
     .subscribe(
       (Response) =>{ console.log('Success!',(Response))

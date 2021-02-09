@@ -7,6 +7,12 @@
     margin-bottom: 20px;
     text-align: center;
     color: darkgray;
+    width :80%;
+}
+
+.bold{
+    font-weight: bold;
+    color:rgb(139, 1, 1)
 }
 
 .row-align{

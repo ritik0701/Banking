@@ -27,11 +27,10 @@ export class MakeTransactionComponent implements OnInit {
   makeTransaction(){
     console.log(this.makeTransactionForm.value)
    this.subscription= this.transactionService.makeTransaction(this.makeTransactionForm.value).subscribe((res:any)=>{
-      if(res == "Added Successfully"){
-        alert("Transaction Successful")
-      }else{
-        alert("Transaction Could not be Completed")
-      }
+      
+    Swal.fire("Transaction Successful")
+      },(err) => {
+       Swal.fire("Transaction Could not be Completed")
    })
   }
 

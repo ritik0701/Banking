@@ -49,7 +49,7 @@
        <div class="row">
         <div class="col-25">
             <label> Transaction Password </label></div>
-        <div class="col-75"> <input type ="text" placeholder="Transaction Password" name="transactionPassword" formControlName=transactionPassword > 
+        <div class="col-75"> <input type ="password" placeholder="Transaction Password" name="transactionPassword" formControlName=transactionPassword > 
 
         <div *ngIf="!makeTransactionForm.controls.transactionPassword?.valid && (makeTransactionForm.controls.transactionPassword?.touched)"  [ngStyle]="{'color':'red'}">
             Invalid Transaction Password

@@ -86,9 +86,9 @@
         <div class="col-25">
             <label>Date of Birth</label>
         </div>
-        <div class="col-75"><input type="text" placeholder="Date of Birth" formControlName="dob">
+        <div class="col-75"><input type="date" placeholder="Date of Birth" formControlName="dob">
             <div *ngIf="!openAccountForm.controls.dob?.valid && (openAccountForm.controls.dob?.touched)"[ngStyle]="{'color':'red'}">
-                Invalid Input 
+                You should be 18 Years old or more!!!
             </div>
          </div> 
     </div> 
